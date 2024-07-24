@@ -1,0 +1,55 @@
+/* src/Timer.css */
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .timeElapsed {
+    font-size: 3em;
+    background: #000;
+    color: #0f0;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .startStopButton, .resetButton {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .startStopButton.start {
+    background: #4caf50;
+    color: white;
+  }
+  
+  .startStopButton.stop {
+    background: #f44336;
+    color: white;
+  }
+  
+  .startStopButton.start:hover {
+    background: #45a049;
+  }
+  
+  .startStopButton.stop:hover {
+    background: #e53935;
+  }
+  
+  .resetButton {
+    background: #ff9800;
+    color: white;
+  }
+  
+  .resetButton:hover {
+    background: #fb8c00;
+  }
+  
