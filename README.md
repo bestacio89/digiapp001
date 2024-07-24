@@ -1,5 +1,3 @@
-Sure! Here are the README files for the `Clock` and `Timer` components, explaining the setup and functionality for a junior developer.
-
 ### Clock Class
 
 ```markdown
