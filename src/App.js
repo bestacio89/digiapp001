@@ -1,18 +1,27 @@
-// src/App.js
-
 import React from 'react';
-import Clock from './clock';
-import Timer from './timer';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import ClockPage from './clockpage';
+import TimerPage from './timerpage';
+import './App.css'; // Import global styles
 
 const App = () => {
   return (
-    <div className="app">
-      <h1>Clock App</h1>
-      <Clock />
-      <p>C'est génial tout</p>
-      <Timer />
-    </div>
+    <Router>
+      <div className="app">
+        {/* Navigation */}
+        <nav>
+          <ul>
+            <li><Link to="/">Clock</Link></li>
+            <li><Link to="/timer">Timer</Link></li>
+          </ul>
+        </nav>
+        {/* Routes */}
+        <Routes>
+          <Route path="/" element={<ClockPage />} />
+          <Route path="/timer" element={<TimerPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

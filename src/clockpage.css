@@ -1,0 +1,28 @@
+/* src/ClockPage.css */
+
+.clockPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #00e5ff;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+  }
+  
+  .clock {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+  

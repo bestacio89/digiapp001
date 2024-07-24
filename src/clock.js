@@ -1,26 +1,31 @@
-// src/Clock.js
-
 import React, { useState, useEffect } from 'react';
-import './clock.css';
+import './clock.css'; // Ensure you have this CSS file for styling
 
 const Clock = () => {
-  const [time, setTime] = useState(new Date());
+  const [dateTime, setDateTime] = useState(new Date());
 
   useEffect(() => {
-    const timerID = setInterval(() => setTime(new Date()), 1000);
-    return () => clearInterval(timerID);
+    const timer = setInterval(() => {
+      setDateTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
   }, []);
 
+  const formatDate = (date) => {
+    const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+    return date.toLocaleDateString('fr-FR', options);
+  };
+
   const formatTime = (date) => {
-    const hours = date.getHours().toString().padStart(2, '0');
-    const minutes = date.getMinutes().toString().padStart(2, '0');
-    const seconds = date.getSeconds().toString().padStart(2, '0');
-    return `${hours}:${minutes}:${seconds}`;
+    const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    return date.toLocaleTimeString('fr-FR', options);
   };
 
   return (
     <div className="clock">
-      <div className="time">{formatTime(time)}</div>
+      <div className="date">{formatDate(dateTime)}</div>
+      <div className="time">{formatTime(dateTime)}</div>
     </div>
   );
 };
