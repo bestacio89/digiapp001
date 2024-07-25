@@ -1,8 +1,10 @@
 .calendar {
+    height: 70vh; /* Make the container full height */
     margin: 20px 0;
   }
   
   .message {
+    height: 70vh; /* Make the container full height */
     color: green;
     font-weight: bold;
   }

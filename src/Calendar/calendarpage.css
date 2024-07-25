@@ -7,19 +7,31 @@
     justify-content: center;
     min-height: calc(100vh - 60px); /* Adjust height to account for navbar */
     padding: 20px;
-    color: #ffffff;
+    background-color: #000033; /* Blue background color */
+    color: #ffffff; /* White text color for readability */
   }
   
   .calendarPage h1 {
     margin-bottom: 20px;
     font-size: 2rem;
-    color: #00ffcc;
+    color: #00ffcc; /* Light blue heading */
     text-shadow: 0 0 10px #00ffcc;
   }
   
   .calendar {
+    height: 70vh; /* Make the container full height */
     width: 100%;
     max-width: 500px;
     margin: 0 auto; /* Center horizontally */
+    border: 3px solid #00ffff; /* Green border for calendar */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    background-color: #001533; /* Darker blue background for calendar content */
+    color: #ffffff; /* White text for readability within calendar */
+  }
+  
+  /* Optional: Add hover effect for calendar days (if applicable) */
+  .calendar .calendar-day:hover {
+    background-color: #002255; /* Slightly darker blue on hover */
   }
   

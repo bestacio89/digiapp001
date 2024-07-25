@@ -1,6 +1,8 @@
 /* src/Clock.css */
 
+
 .clock {
+    height: 70vh; /* Make the container full height */
     display: flex;
     flex-direction: column;
     align-items: center;

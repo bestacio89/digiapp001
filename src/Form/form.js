@@ -11,13 +11,14 @@ const UserForm = () => {
     email: '',
     date: null,
     message: '',
+    codeWithYou: false, // Initial value for the checkbox
   });
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: type === 'checkbox' ? checked : value, // Handle checkbox change
     });
   };
 
@@ -44,10 +45,12 @@ const UserForm = () => {
       return;
     }
 
-    const { firstName, lastName, email, date, message } = formData;
+    const { firstName, lastName, email, date, message, codeWithYou } = formData;
     const formattedDate = date ? date.toDateString() : '';
+    const codeWithYouMessage = codeWithYou ? 'Yes' : 'No';
+
     alert(
-      `Name: ${firstName} ${lastName}\nAge: ${parsedAge}\nEmail: ${email}\nDate: ${formattedDate}\nMessage: ${message}`
+      `Name: ${firstName} ${lastName}\nAge: ${parsedAge}\nEmail: ${email}\nDate: ${formattedDate}\nMessage: ${message}\nThe code is with you: ${codeWithYouMessage}`
     );
   };
 
@@ -106,6 +109,15 @@ const UserForm = () => {
           <textarea
             name="message"
             value={formData.message}
+            onChange={handleInputChange}
+          />
+        </label>
+        <label>
+          Is the code with you?
+          <input
+            type="checkbox"
+            name="codeWithYou"
+            checked={formData.codeWithYou}
             onChange={handleInputChange}
           />
         </label>
