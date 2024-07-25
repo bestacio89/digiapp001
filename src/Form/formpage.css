@@ -1,0 +1,68 @@
+/* src/userformpage.css */
+
+.userFormPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 60px);
+    margin-left: 200px; /* To account for the sidebar */
+    padding: 20px;
+    color: #ffffff; /* White text for black background */
+
+  }
+  
+  .userFormPage h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+  }
+  
+  .userForm {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  .userForm input,
+  .userForm button {
+    border: 1px solid #00ffff; /* Neon border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px 10px; /* Increased input height */
+    font-family: 'your_futuristic_font', sans-serif; /* Replace with your desired font */
+    color: #ffffff; /* White text */
+    margin-bottom: 10px;
+  }
+  
+  .userForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: inherit; /* White text */
+    font-size: 1.1rem; /* Increased font size for labels (optional) */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+  }
+  
+  .userForm button {
+    background-color: transparent; /* Transparent button */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    width: 100%; /* Match input field width */
+  }
+  
+  .userForm button:hover {
+    background-color: #00ccff; /* Button hover effect */
+  }
+  
+  /* Optional: Focus state for input & button (add if desired) */
+  .userForm input:focus,
+  .userForm button:focus {
+    outline: none; /* Remove default outline */
+    border: 2px solid #00ffff; /* Thicker border on focus */
+  }
+  
+  /* Optional: Error state for input (add if desired) */
+  .userForm input.error {
+    border-color: #ff0000; /* Red border for error state */
+  }
+  

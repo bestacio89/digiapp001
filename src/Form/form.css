@@ -1,0 +1,68 @@
+/* src/userform.css */
+.userForm {
+    display: flex;
+    justify-content: center; /* Center the form container horizontally */
+    align-items: center; /* Center the form container vertically */
+    height: 70vh; /* Make the container full height */
+    margin: 0;
+    padding: 20px;
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+    color: #00ffcc;
+  }
+  
+  .userForm form {
+    width: 100%;
+    max-width: 400px; /* Limit the maximum width of the form */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .userForm label {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #00ffcc;
+  }
+  
+  .userForm input,
+  .userForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px; /* Add margin below each input for spacing */
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #00ffcc;
+    font-size: 1rem;
+  }
+  
+  .userForm input:focus,
+  .userForm textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00ffcc;
+  }
+  
+  .userForm button {
+    width: 100%;
+    max-width: 120px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ff0099;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ff0099;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .userForm button:hover {
+    background-color: #ff0099;
+    color: #ffffff;
+    box-shadow: 0 0 20px #ff0099;
+  }
+  
